@@ -1,0 +1,23 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/uhh-app-tracker-frontend", "."]
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/$PROJECT_ID/uhh-app-tracker-frontend"]
+    
+  # Deploy the Docker image to Cloud Run
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: "gcloud"
+    args:
+      [
+        "run", "deploy", "uhh-app-tracker-frontend", # Name of the Cloud Run service
+        "--image", "gcr.io/$PROJECT_ID/uhh-app-tracker-frontend", # Docker image URL
+        "--region", "us-central1", # Set the region
+        "--platform", "managed", # Cloud Run is fully managed
+        "--allow-unauthenticated" # Allow public access (optional)
+      ]  
+
+images:
+  - "gcr.io/$PROJECT_ID/uhh-app-tracker-frontend"
+
+options:
+  logging: "CLOUD_LOGGING_ONLY"

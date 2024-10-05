@@ -1,0 +1,120 @@
+/* General Styles */
+
+.app-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.app-title {
+  font-size: 2rem;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Form Styles */
+
+.form-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.patient-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.patient-form label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.patient-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.message-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.home-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+}
